@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ignore
+__pycache__
+C2000
+3302-7120_dcdc_0409
+*.lkf
