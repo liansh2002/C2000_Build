@@ -26,7 +26,7 @@ import concurrent.futures   #线程池支持
 import functools
 from itertools import repeat
 #from colorama import init, Fore, Back, Style
-from C2000_boot import boot
+#from C2000_boot import boot
 
 class PJT(object):
     def __init__(self, project_dir):
