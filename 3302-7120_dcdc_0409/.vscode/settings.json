@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "OBJ": true
+    },
+    "files.encoding": "gbk",
+}

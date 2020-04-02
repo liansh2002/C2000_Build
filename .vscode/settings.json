@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "3302-*/": true,
+        "*.code-workspace": true
+    }
+}

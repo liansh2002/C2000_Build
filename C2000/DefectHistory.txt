@@ -1,0 +1,459 @@
+C2000 C/C++ CODE GENERATION TOOLS
+Defect History
+5.2.0
+April 2009
+
+------------------------------------------------------------------------------
+Table of Contents
+------------------------------------------------------------------------------
+1.  5.2.0 Fixed Issues
+2.  5.2.0B1 Fixed Issues
+3.  5.2.0B1 Current Known Issues
+
+
+------------------------------------------------------------------------------
+1. 5.2.0 Fixed Issues
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030215
+------------------------------------------------------------------------------
+
+Summary            : C I/O cannot support ftell/fseek for DOS format files
+		     opened in text mode
+
+Fixed in           : 5.2.0
+Severity           : S2 - Major
+Affected Component : Runtime Support Libraries (RTS)
+
+Description: 
+Use of ftell and fseek on DOS formatted files is not supported in text 
+mode, with buffered I/O.  The avoid this error the run-time libraries
+can be rebuilt with unbuffered I/O by defining the following macro 
+_TI_FORCE_UNBUFFERED_TEXT_IO.  This is defined by adding this switch
+
+-D_TI_FORCE_UNBUFFERED_TEXT_IO
+
+to the shell. 
+
+Workaround: 
+1. Open the DOS file in binary mode.
+2. Use one of many DOS-to-Unix file converters to strip
+carriage-returns 
+from the input file.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030307
+------------------------------------------------------------------------------
+
+Summary            : Compiler generates incorrect MOVL instruction
+
+Fixed in           : 5.2.0
+Severity           : S2 - Major
+Affected Component : C/C++ Compiler (cl)
+
+Description: 
+When the ptrdiff_t type is larger than the pointer type, as in 
+large-model C5x, C2x, and MSP, and huge-model C5x, pointer expressions
+of the form (I+5)+P may be improperly reassociated into (I+P)+5.  This 
+reassociation causes problems when either I, the integer part, or 5,
+the explicit integer constant, is negative.  The exact symptom varies, but 
+the underlying problem is that the wrong address is generated.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030362
+------------------------------------------------------------------------------
+
+Summary            : Optimizer generates segmentation fault with -o2 and higher
+
+Fixed in           : 5.2.0
+Severity           : S2 - Major
+Affected Component : Optimizer
+
+Description: 
+A loop nest which may be unrolled-and-jammed -- which requires a
+specific set of conditions, but is essentially simple loops which can legally
+have the outer loop unrolled -- whose outer loop's initial value is not 
+explicitly set in the loop may cause the optimiser to crash.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030398
+------------------------------------------------------------------------------
+
+Summary            : C28x linker v5.1.2 partial linking displacement problem
+
+Fixed in           : 5.2.0
+Severity           : S2 - Major
+Affected Component : COFF Linker
+
+Description: 
+During partial linking of object files that contain PARTLS6 relocation 
+entries, the displacement of those relocation entries could contain an 
+incorrect displacement.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030583
+------------------------------------------------------------------------------
+
+Summary            : hex2000 utility truncates Motorola S record addresses to 22
+		     bits even when -byte option is used
+
+Fixed in           : 5.2.0
+Severity           : S2 - Major
+Affected Component : Hex Converter (hex)
+
+Description: 
+The hex converter may truncate Motorola S record addresses to 22 bits 
+when -byte option is used for byte addressing.	This will occur if the 
+byte address exceeds 22 bits.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030635
+------------------------------------------------------------------------------
+
+Summary            : Incorrect optimization of constant performed with -o2 and
+		     higher
+
+Fixed in           : 5.2.0
+Severity           : S2 - Major
+Affected Component : Optimizer
+
+Description: 
+A reference to a field of a union, optionally included in some other 
+structure type, may be replaced with an incorrect value if the variable
+is auto-initialised and const.	Ie, given "T const x = {1, 2};" where T
+is a union, a later "x.a" may be replaced by 2 even though that doesn't
+correspond to the proper field.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030700
+------------------------------------------------------------------------------
+
+Summary            : Symbol specified with .label directive within assembly
+		     source file gets linked to run address instead of load 
+		     address
+
+Fixed in           : 5.2.0
+Severity           : S2 - Major
+Affected Component : C/C++ Compiler (cl)
+
+Description: 
+Symbol specified with .label directive within assembly source file gets
+linked to run address instead of load address
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030741
+------------------------------------------------------------------------------
+
+Summary            : Linker does not honor allocation based on memory attribute
+		     in combination with Page specification
+
+Fixed in           : 5.2.0
+Severity           : S3 - Minor
+Affected Component : Linker
+
+Description: 
+Linker does not honor allocation based on memory attribute in
+combination with Page specification.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030978
+------------------------------------------------------------------------------
+
+Summary            : A location accessed through pointers P and Q faile to
+		     refetch value when read via P, written via Q and read 
+		     via P
+
+Fixed in           : 5.2.0
+Severity           : S2 - Major
+Affected Component : Optimizer
+
+Description: 
+The optimiser may miss an alias if variables are declared using a 
+typedef for a type different than int but the same size as int. 
+
+
+------------------------------------------------------------------------------
+2. 5.2.0B1 Fixed Issues
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00029389
+------------------------------------------------------------------------------
+
+Summary            : Compiler generates code that releases local frame prior to
+		     using data in stack causing stack corruption
+
+Fixed in           : 5.2.0B1
+Severity           : S2 - Major
+Affected Component : C/C++ Compiler (cl)
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00029667
+------------------------------------------------------------------------------
+
+Summary            : Compiler generates internal error no match for SCOMMA
+
+Fixed in           : 5.2.0B1
+Severity           : S2 - Major
+Affected Component : C/C++ Compiler (cl)
+
+Description: 
+Compiler generates internal error no match for SCOMMA.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030129
+------------------------------------------------------------------------------
+
+Summary            : Optimizer generates segmentation fault on certain source
+		     levels with any level of optimization
+
+Fixed in           : 5.2.0B1
+Severity           : S2 - Major
+Affected Component : Optimizer
+
+Description: 
+The min-index or max-index idiom is recognised by the optimiser and 
+converted into an intrinsic for C2000 with FPU support.  If other 
+statements appear within the compound statement before the IF that
+starts the idiom, the optimiser may crash.
+
+------------------------------------------------------------------------------
+FIXED  SDSCM00030168
+------------------------------------------------------------------------------
+
+Summary            : DWARF line number entry encoding error
+
+Fixed in           : 5.2.0B1
+Severity           : S2 - Major
+Affected Component : Assembler
+
+Description: 
+The DWARF line number information for the last line number entry, 
+representing the last line of the function, can be encoded incorrectly 
+depending on the values of the other line number entries.  This is more
+likely for functions with very few line number entries.
+
+
+------------------------------------------------------------------------------
+3. Current Known Issues
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008248
+------------------------------------------------------------------------------
+
+Summary            : Compilers on PC will not work without TMP set
+Affected Component : C/C++ Compiler
+
+Description: 
+When compiling on the PC, the code generator cannot find the icode 
+file produced by the parser if the environment variable TMP is no 
+set.  If TMP is set, then all appears well.
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008251
+------------------------------------------------------------------------------
+
+Summary            : Printf format '%#04x' fills zeros into wrong location
+Affected Component : Code Generator
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008276
+------------------------------------------------------------------------------
+
+Summary            : Linker accepts illegal address ranges and truncates to a
+		     valid address
+Affected Component : Linker
+
+Description: 
+Linker accepts illegal address ranges and truncates to a valid address 
+without any warnings.
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008465
+------------------------------------------------------------------------------
+
+Summary            : Codegen crash because of void pointer dereference
+Affected Component : Parser
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008525
+------------------------------------------------------------------------------
+
+Summary            : Float literal conversion to integers incorrectly saturates
+		     at 32 bits
+Affected Component : Parser
+
+Description: 
+The parser floating-point folding routines always use native 'long' as 
+the integer type to fold a float constant to.  
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008534
+------------------------------------------------------------------------------
+
+Summary            : Linker -xml_link_info option doesn't work when in a command
+		     file
+Affected Component : Linker
+
+Description: 
+The option --xml_link_info=file.xml does not work when it is
+placed inside a linker command file.  
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008537
+------------------------------------------------------------------------------
+
+Summary            : assembler expression ~(0x80000000) evaulates as 0x80000000
+Affected Component : Code Generator
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008543
+------------------------------------------------------------------------------
+
+Summary            : Forward reference in .space generates an internal error
+Affected Component : Assembler
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008630
+------------------------------------------------------------------------------
+
+Summary            : printf gives wrong value for pointer when its value is
+		     incremented
+Affected Component : C/C++ Compiler
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008652
+------------------------------------------------------------------------------
+
+Summary            : pow(2,x) has fairly significant rounding error
+Affected Component : Runtime Support Libraries (RTS)
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008691
+------------------------------------------------------------------------------
+
+Summary            : Codegen tools round floats different than RTS
+Affected Component : Parser
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008721
+------------------------------------------------------------------------------
+
+Summary            : Linker unexpectedly adds STYP_DATA flag into a 
+                     text section
+Affected Component : Linker
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008790
+------------------------------------------------------------------------------
+
+Summary            : .struct assembler directive is ignoring optional OFFSET
+		     value.
+Affected Component : Assembler
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00008928
+------------------------------------------------------------------------------
+
+Summary            : Extern inline functions are not supported in C/C++
+		     Compiler
+Affected Component : Parser
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00012183
+------------------------------------------------------------------------------
+
+Summary            : Integer to pointer conversion doesn't truncate values
+Affected Component : Code Generator
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00013456
+------------------------------------------------------------------------------
+
+Summary            : fgets in _IONBF mode does not respect size limit
+Affected Component : Runtime Support Libraries (RTS)
+
+Description: 
+The second argument to fgets() is the maximum number of chars to read. 
+In _IONBF mode, fgets() reads until end-of-line, potentially overrunning the 
+input buffer.  
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00014430
+------------------------------------------------------------------------------
+
+Summary            : calloc doesn't check arguments to make sure the requested
+		     size is reasonable
+Affected Component : Runtime Support Libraries (RTS)
+
+Description: 
+The function calloc() is required to return a pointer to memory
+representing "nelem" copies of "size" bytes, or NULL if the request
+cannot be satisfied.  However, for some values of "nelem" and "size"
+(specifically when the result of nelem*size wraps around), calloc can
+return a pointer to an object that is not large enough, rather than
+NULL.
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00016638
+------------------------------------------------------------------------------
+
+Summary            : dis2000 does not handle disassembly of expanded BCND
+		     instruction properly
+Affected Component : Disassembler
+
+Description: 
+When C2XLP-specific instruction BCND is specified with multiple
+condition operands, the disassembly output does not show the expanded 
+instruction sequence properly.
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00016646
+------------------------------------------------------------------------------
+
+Summary            : strcmp doesn't correctly handle values with uppermost bit
+		     set
+Affected Component : Runtime Support Libraries (RTS)
+
+Description: 
+The standard says "The sign of a nonzero value returned by the
+comparison functions memcmp, strcmp, and strncmp is determined by the
+sign of the difference between the values of the first pair of
+characters (both interpreted as unsigned char) that differ in the
+objects being compared."  However, this is a problem for 16-bit targets
+where the size of char is the same as the size of int.	In this case,
+it's easy to mistakenly use an unsigned subtract to do the comparison
+and return it directly; this value can overflow.
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00018691
+------------------------------------------------------------------------------
+
+Summary            : Linker gives misleading warning when dot expressions used
+		     in SECTION directive for .stack section
+Affected Component : Linker
+
+Description: 
+Linker gives the warning
+warning creating ".stack" section with default size of 0x800; use the
+-stack option to change the default size even when the application does 
+not link in boot code from RTS lib.
+
+------------------------------------------------------------------------------
+KNOWN ISSUE  SDSCM00030311
+------------------------------------------------------------------------------
+
+Summary            : Provide user visibility to the __fmax and __fmin
+		     intrinsics.
+Affected Component : C/C++ Compiler (cl)
+
+Description: 
+Users need access from C/C++ to the MAXF32 and MINF32 instructions in
+cases where the min/max idioms cannot be used.	The __f32_max_idx and
+__f32_min_idx intrinsics cannot be used to generate these instructions
+since the parallel instruction cannot have duplicate dest registers. 
+(See below for original description.)  The __fmax and __fmin intrinsics
+are used by the compiler, but are not available from the parser to the
+user.  This is a request to add these intrinsics.

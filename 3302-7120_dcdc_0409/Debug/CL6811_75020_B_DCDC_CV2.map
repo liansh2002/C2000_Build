@@ -1,0 +1,1568 @@
+******************************************************************************
+  TMS320C2000 Evaluation Linker PC v5.2.0                      
+******************************************************************************
+>> Linked Wed Apr 03 16:13:05 2019
+
+OUTPUT FILE NAME:   <.\\Debug\\CL6811_75020_B_DCDC_CV2.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 003f610d
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+PAGE 0:
+  RAML0_PRG             00008000   000013e0  00000bd2  0000080e  RWIX
+  RAML0BOOT_PRG         000093e0   00000020  0000001f  00000001  RWIX
+  OTP                   003d7800   00000400  00000000  00000400  RWIX
+  APPVEC                003f0000   00000020  0000000a  00000016  RWIX
+  FLASH                 003f0020   00005fdf  0000336e  00002c71  RWIX
+  APPCRC                003f5fff   00000001  00000001  00000000  RWIX
+  BOOTVEC               003f6000   00000040  0000002c  00000014  RWIX
+  LIB_FLASH             003f6040   00000270  00000237  00000039  RWIX
+  FLASH_BOOT            003f62b0   00001cd0  00000fc7  00000d09  RWIX
+  CSM_RSVD              003f7f80   00000076  00000076  00000000  RWIX
+  BEGIN                 003f7ff6   00000002  00000002  00000000  RWIX
+  CSM_PWL               003f7ff8   00000008  00000008  00000000  RWIX
+  ROM                   003ff000   00000fc0  00000b50  00000470  RWIX
+  RESET                 003fffc0   00000002  00000000  00000002  RWIX
+  VECTORS               003fffc2   0000003e  00000000  0000003e  RWIX
+
+PAGE 1:
+  RAMM0                 00000000   00000400  00000000  00000400  RWIX
+  RAMM1                 00000400   00000400  00000400  00000000  RWIX
+  DEV_EMU               00000880   00000180  000000d0  000000b0  RWIX
+  FLASH_REGS            00000a80   00000060  00000008  00000058  RWIX
+  CSM                   00000ae0   00000010  00000010  00000000  RWIX
+  ADC_MIRROR            00000b00   00000010  00000010  00000000  RWIX
+  CPU_TIMER0            00000c00   00000008  00000008  00000000  RWIX
+  CPU_TIMER1            00000c08   00000008  00000008  00000000  RWIX
+  CPU_TIMER2            00000c10   00000008  00000008  00000000  RWIX
+  PIE_CTRL              00000ce0   00000020  0000001a  00000006  RWIX
+  PIE_VECT              00000d00   00000100  00000100  00000000  RWIX
+  ECANA                 00006000   00000040  00000034  0000000c  RWIX
+  ECANA_LAM             00006040   00000040  00000040  00000000  RWIX
+  ECANA_MOTS            00006080   00000040  00000040  00000000  RWIX
+  ECANA_MOTO            000060c0   00000040  00000040  00000000  RWIX
+  ECANA_MBOX            00006100   00000100  00000100  00000000  RWIX
+  ECANB                 00006200   00000040  00000034  0000000c  RWIX
+  ECANB_LAM             00006240   00000040  00000040  00000000  RWIX
+  ECANB_MOTS            00006280   00000040  00000040  00000000  RWIX
+  ECANB_MOTO            000062c0   00000040  00000040  00000000  RWIX
+  ECANB_MBOX            00006300   00000100  00000100  00000000  RWIX
+  EPWM1                 00006800   00000022  00000022  00000000  RWIX
+  EPWM2                 00006840   00000022  00000022  00000000  RWIX
+  EPWM3                 00006880   00000022  00000022  00000000  RWIX
+  EPWM4                 000068c0   00000022  00000022  00000000  RWIX
+  EPWM5                 00006900   00000022  00000022  00000000  RWIX
+  EPWM6                 00006940   00000022  00000022  00000000  RWIX
+  ECAP1                 00006a00   00000020  00000020  00000000  RWIX
+  ECAP2                 00006a20   00000020  00000020  00000000  RWIX
+  ECAP3                 00006a40   00000020  00000020  00000000  RWIX
+  ECAP4                 00006a60   00000020  00000020  00000000  RWIX
+  EQEP1                 00006b00   00000040  00000040  00000000  RWIX
+  EQEP2                 00006b40   00000040  00000040  00000000  RWIX
+  GPIOCTRL              00006f80   00000040  00000040  00000000  RWIX
+  GPIODAT               00006fc0   00000020  00000020  00000000  RWIX
+  GPIOINT               00006fe0   00000020  0000000a  00000016  RWIX
+  SYSTEM                00007010   00000020  00000020  00000000  RWIX
+  SPIA                  00007040   00000010  00000010  00000000  RWIX
+  SCIA                  00007050   00000010  00000010  00000000  RWIX
+  XINTRUPT              00007070   00000010  00000010  00000000  RWIX
+  ADC                   00007100   00000020  0000001e  00000002  RWIX
+  SPIB                  00007740   00000010  00000010  00000000  RWIX
+  SCIB                  00007750   00000010  00000010  00000000  RWIX
+  SPIC                  00007760   00000010  00000010  00000000  RWIX
+  SPID                  00007780   00000010  00000010  00000000  RWIX
+  I2CA                  00007900   00000040  00000022  0000001e  RWIX
+  DCISR                 00009000   00000080  00000066  0000001a  RWIX
+  RAML0_DATA            00009400   00000c00  000006c0  00000540  RWIX
+  CSM_PWL               003f7ff8   00000008  00000008  00000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.appvec    0    003f0000    0000000a     
+                  003f0000    0000000a     dcdc100a_entryvect.obj (.appvec)
+
+.text      0    003f0020    00002d6d     
+                  003f0020    00002d5d     dcdc100a_main.obj (.text)
+                  003f2d7d    00000010     rts2800_ml.lib : u_tofs.obj (.text)
+
+ramfuncs   0    003f2d8d    000004b7     RUN ADDR = 0000871b
+                  003f2d8d    000004b7     dcdc100a_isr.obj (ramfuncs)
+
+.switch    0    003f3244    00000108     
+                  003f3244    00000108     dcdc100a_main.obj (.switch)
+
+.cinit     0    003f334c    0000003a     
+                  003f334c    00000030     dcdc100a_main.obj (.cinit)
+                  003f337c    00000008     var.obj (.cinit)
+                  003f3384    00000002     --HOLE-- [fill = 0]
+
+.econst    0    003f3386    00000008     
+                  003f3386    00000008     dcdc100a_main.obj (.econst)
+
+appcrc     0    003f5fff    00000001     
+                  003f5fff    00000001     dcdc100a_entryvect.obj (appcrc)
+
+.bootvec   0    003f6000    0000002c     
+                  003f6000    0000002c     dcdc100a_entryvect.obj (.bootvec)
+
+.cal       0    003f6040    00000237     
+                  003f6040    00000082     rts2800_ml.lib : fd_mpy.obj (.text)
+                  003f60c2    0000004b                    : exit.obj (.text)
+                  003f610d    00000046                    : boot.obj (.text)
+                  003f6153    0000002a                    : l_div.obj (.text)
+                  003f617d    0000001f                    : fd_tol.obj (.text)
+                  003f619c    0000001d                    : fs_tofd.obj (.text)
+                  003f61b9    0000001d                    : fs_tou.obj (.text)
+                  003f61d6    0000001a                    : i_tofs.obj (.text)
+                  003f61f0    0000000b                    : u_div.obj (.text)
+                  003f61fb    00000009                    : _lock.obj (.text)
+                  003f6204    0000000e                    : exit.obj (.cinit)
+                  003f6212    0000000a                    : _lock.obj (.cinit)
+                  003f621c    00000047     IQmath.lib : IQ10div.obj (IQmath)
+                  003f6263    00000014                : IQ10toF.obj (IQmath)
+
+bootramfuncs 
+*          0    003f62b0    0000001f     RUN ADDR = 000093e0
+                  003f62b0    0000001b     dsp280x_sysctrl.obj (bootramfuncs)
+                  003f62cb    00000004     dsp280x_usdelay.obj (bootramfuncs)
+
+Flash28_API 
+*          0    003f62d0    0000071b     RUN ADDR = 00008000
+                  003f62d0    00000014     Flash2806_API_V302.lib : Flash28_Erase.obj (.econst)
+                  003f62e4    000000a9                            : Flash28_Prog.obj (.text)
+                  003f638d    000000a0                            : Flash28_Erase.obj (.text)
+                  003f642d    0000009a                            : Flash28_Erase_Pulse.obj (.text)
+                  003f64c7    00000084                            : Flash28_Internals.obj (.text)
+                  003f654b    0000007f                            : Flash28_Prog_Pulse.obj (.text)
+                  003f65ca    0000007d                            : Flash28_Compact_Pulse.obj (.text)
+                  003f6647    0000005b                            : Flash28_EraseSector.obj (.text)
+                  003f66a2    00000054                            : Flash28_CompactSector.obj (.text)
+                  003f66f6    00000041                            : Flash28_ClearLoop.obj (.text)
+                  003f6737    00000033                            : Flash28_ClearSector.obj (.text)
+                  003f676a    00000033                            : Flash28_Verify.obj (.text)
+                  003f679d    00000024                            : Flash28_Init.obj (.text)
+                  003f67c1    00000014                            : Flash28_Utils.obj (.text)
+                  003f67d5    0000000d                            : Flash28_Delay.obj (.text)
+                  003f67e2    00000007                            : Flash28_DisInt.obj (.text)
+                  003f67e9    0000000a                            : Flash28_Globals.obj (.cinit)
+                  003f67f3    000001f8     100a_boot.obj (Flash28_API)
+
+.init      0    003f69eb    0000045a     
+                  003f69eb    0000005b     dsp280x_adc.obj (.text)
+                  003f6a46    00000178     dsp280x_epwm.obj (.text)
+                  003f6bbe    0000000d     dsp280x_initperipherals.obj (.text)
+                  003f6bcb    00000028     dsp280x_piectrl.obj (.text)
+                  003f6bf3    0000001e     dsp280x_pievect.obj (.text)
+                  003f6c11    00000024     dsp280x_cputimers.obj (.text)
+                  003f6c35    0000003c     dsp280x_defaultisr.obj (.text)
+                  003f6c71    000000bd     dsp280x_ecan.obj (.text)
+                  003f6d2e    0000002f     dsp280x_gpio.obj (.text)
+                  003f6d5d    00000033     dsp280x_i2c.obj (.text)
+                  003f6d90    00000030     dsp280x_sci.obj (.text)
+                  003f6dc0    00000015     dsp280x_memcopy.obj (.text)
+                  003f6dd5    00000070     dsp280x_sysctrl.obj (.text)
+
+FlashBoot 
+*          0    003f6e45    00000433     
+                  003f6e45    00000418     100a_boot.obj (FlashBoot)
+                  003f725d    0000001b     dcdc100a_entryvect.obj (FlashBoot)
+
+csm_rsvd   0    003f7f80    00000076     
+                  003f7f80    00000076     dsp280x_csmpasswords.obj (csm_rsvd)
+
+codestart 
+*          0    003f7ff6    00000002     
+                  003f7ff6    00000002     dsp280x_codestartbranch.obj (codestart)
+
+csmpasswds 
+*          0    003f7ff8    00000008     
+                  003f7ff8    00000008     dsp280x_csmpasswords.obj (csmpasswds)
+
+IQmathTables 
+*          0    003ff000    00000b50     NOLOAD SECTION
+                  003ff000    00000b50     IQmath.lib : IQmathTables.obj (IQmathTables)
+
+.reset     0    003fffc0    00000002     DSECT
+                  003fffc0    00000002     rts2800_ml.lib : boot.obj (.reset)
+
+vectors    0    003fffc2    00000000     DSECT
+
+.stack     1    00000400    00000400     UNINITIALIZED
+                  00000400    00000400     --HOLE--
+
+DevEmuRegsFile 
+*          1    00000880    000000d0     UNINITIALIZED
+                  00000880    000000d0     dsp280x_globalvariabledefs.obj (DevEmuRegsFile)
+
+FlashRegsFile 
+*          1    00000a80    00000008     UNINITIALIZED
+                  00000a80    00000008     dsp280x_globalvariabledefs.obj (FlashRegsFile)
+
+CsmRegsFile 
+*          1    00000ae0    00000010     UNINITIALIZED
+                  00000ae0    00000010     dsp280x_globalvariabledefs.obj (CsmRegsFile)
+
+AdcMirrorFile 
+*          1    00000b00    00000010     UNINITIALIZED
+                  00000b00    00000010     dsp280x_globalvariabledefs.obj (AdcMirrorFile)
+
+CpuTimer0RegsFile 
+*          1    00000c00    00000008     UNINITIALIZED
+                  00000c00    00000008     dsp280x_globalvariabledefs.obj (CpuTimer0RegsFile)
+
+CpuTimer1RegsFile 
+*          1    00000c08    00000008     UNINITIALIZED
+                  00000c08    00000008     dsp280x_globalvariabledefs.obj (CpuTimer1RegsFile)
+
+CpuTimer2RegsFile 
+*          1    00000c10    00000008     UNINITIALIZED
+                  00000c10    00000008     dsp280x_globalvariabledefs.obj (CpuTimer2RegsFile)
+
+PieCtrlRegsFile 
+*          1    00000ce0    0000001a     UNINITIALIZED
+                  00000ce0    0000001a     dsp280x_globalvariabledefs.obj (PieCtrlRegsFile)
+
+PieVectTableFile 
+*          1    00000d00    00000100     UNINITIALIZED
+                  00000d00    00000100     dsp280x_globalvariabledefs.obj (PieVectTableFile)
+
+ECanaRegsFile 
+*          1    00006000    00000034     UNINITIALIZED
+                  00006000    00000034     dsp280x_globalvariabledefs.obj (ECanaRegsFile)
+
+ECanaLAMRegsFile 
+*          1    00006040    00000040     UNINITIALIZED
+                  00006040    00000040     dsp280x_globalvariabledefs.obj (ECanaLAMRegsFile)
+
+ECanaMOTSRegsFile 
+*          1    00006080    00000040     UNINITIALIZED
+                  00006080    00000040     dsp280x_globalvariabledefs.obj (ECanaMOTSRegsFile)
+
+ECanaMOTORegsFile 
+*          1    000060c0    00000040     UNINITIALIZED
+                  000060c0    00000040     dsp280x_globalvariabledefs.obj (ECanaMOTORegsFile)
+
+ECanaMboxesFile 
+*          1    00006100    00000100     UNINITIALIZED
+                  00006100    00000100     dsp280x_globalvariabledefs.obj (ECanaMboxesFile)
+
+ECanbRegsFile 
+*          1    00006200    00000034     UNINITIALIZED
+                  00006200    00000034     dsp280x_globalvariabledefs.obj (ECanbRegsFile)
+
+ECanbLAMRegsFile 
+*          1    00006240    00000040     UNINITIALIZED
+                  00006240    00000040     dsp280x_globalvariabledefs.obj (ECanbLAMRegsFile)
+
+ECanbMOTSRegsFile 
+*          1    00006280    00000040     UNINITIALIZED
+                  00006280    00000040     dsp280x_globalvariabledefs.obj (ECanbMOTSRegsFile)
+
+ECanbMOTORegsFile 
+*          1    000062c0    00000040     UNINITIALIZED
+                  000062c0    00000040     dsp280x_globalvariabledefs.obj (ECanbMOTORegsFile)
+
+ECanbMboxesFile 
+*          1    00006300    00000100     UNINITIALIZED
+                  00006300    00000100     dsp280x_globalvariabledefs.obj (ECanbMboxesFile)
+
+EPwm1RegsFile 
+*          1    00006800    00000022     UNINITIALIZED
+                  00006800    00000022     dsp280x_globalvariabledefs.obj (EPwm1RegsFile)
+
+EPwm2RegsFile 
+*          1    00006840    00000022     UNINITIALIZED
+                  00006840    00000022     dsp280x_globalvariabledefs.obj (EPwm2RegsFile)
+
+EPwm3RegsFile 
+*          1    00006880    00000022     UNINITIALIZED
+                  00006880    00000022     dsp280x_globalvariabledefs.obj (EPwm3RegsFile)
+
+EPwm4RegsFile 
+*          1    000068c0    00000022     UNINITIALIZED
+                  000068c0    00000022     dsp280x_globalvariabledefs.obj (EPwm4RegsFile)
+
+EPwm5RegsFile 
+*          1    00006900    00000022     UNINITIALIZED
+                  00006900    00000022     dsp280x_globalvariabledefs.obj (EPwm5RegsFile)
+
+EPwm6RegsFile 
+*          1    00006940    00000022     UNINITIALIZED
+                  00006940    00000022     dsp280x_globalvariabledefs.obj (EPwm6RegsFile)
+
+ECap1RegsFile 
+*          1    00006a00    00000020     UNINITIALIZED
+                  00006a00    00000020     dsp280x_globalvariabledefs.obj (ECap1RegsFile)
+
+ECap2RegsFile 
+*          1    00006a20    00000020     UNINITIALIZED
+                  00006a20    00000020     dsp280x_globalvariabledefs.obj (ECap2RegsFile)
+
+ECap3RegsFile 
+*          1    00006a40    00000020     UNINITIALIZED
+                  00006a40    00000020     dsp280x_globalvariabledefs.obj (ECap3RegsFile)
+
+ECap4RegsFile 
+*          1    00006a60    00000020     UNINITIALIZED
+                  00006a60    00000020     dsp280x_globalvariabledefs.obj (ECap4RegsFile)
+
+EQep1RegsFile 
+*          1    00006b00    00000040     UNINITIALIZED
+                  00006b00    00000040     dsp280x_globalvariabledefs.obj (EQep1RegsFile)
+
+EQep2RegsFile 
+*          1    00006b40    00000040     UNINITIALIZED
+                  00006b40    00000040     dsp280x_globalvariabledefs.obj (EQep2RegsFile)
+
+GpioCtrlRegsFile 
+*          1    00006f80    00000040     UNINITIALIZED
+                  00006f80    00000040     dsp280x_globalvariabledefs.obj (GpioCtrlRegsFile)
+
+GpioDataRegsFile 
+*          1    00006fc0    00000020     UNINITIALIZED
+                  00006fc0    00000020     dsp280x_globalvariabledefs.obj (GpioDataRegsFile)
+
+GpioIntRegsFile 
+*          1    00006fe0    0000000a     UNINITIALIZED
+                  00006fe0    0000000a     dsp280x_globalvariabledefs.obj (GpioIntRegsFile)
+
+SysCtrlRegsFile 
+*          1    00007010    00000020     UNINITIALIZED
+                  00007010    00000020     dsp280x_globalvariabledefs.obj (SysCtrlRegsFile)
+
+SpiaRegsFile 
+*          1    00007040    00000010     UNINITIALIZED
+                  00007040    00000010     dsp280x_globalvariabledefs.obj (SpiaRegsFile)
+
+SciaRegsFile 
+*          1    00007050    00000010     UNINITIALIZED
+                  00007050    00000010     dsp280x_globalvariabledefs.obj (SciaRegsFile)
+
+XIntruptRegsFile 
+*          1    00007070    00000010     UNINITIALIZED
+                  00007070    00000010     dsp280x_globalvariabledefs.obj (XIntruptRegsFile)
+
+AdcRegsFile 
+*          1    00007100    0000001e     UNINITIALIZED
+                  00007100    0000001e     dsp280x_globalvariabledefs.obj (AdcRegsFile)
+
+SpibRegsFile 
+*          1    00007740    00000010     UNINITIALIZED
+                  00007740    00000010     dsp280x_globalvariabledefs.obj (SpibRegsFile)
+
+ScibRegsFile 
+*          1    00007750    00000010     UNINITIALIZED
+                  00007750    00000010     dsp280x_globalvariabledefs.obj (ScibRegsFile)
+
+SpicRegsFile 
+*          1    00007760    00000010     UNINITIALIZED
+                  00007760    00000010     dsp280x_globalvariabledefs.obj (SpicRegsFile)
+
+SpidRegsFile 
+*          1    00007780    00000010     UNINITIALIZED
+                  00007780    00000010     dsp280x_globalvariabledefs.obj (SpidRegsFile)
+
+I2caRegsFile 
+*          1    00007900    00000022     UNINITIALIZED
+                  00007900    00000022     dsp280x_globalvariabledefs.obj (I2caRegsFile)
+
+DcdcisrFile 
+*          1    00009000    00000066     UNINITIALIZED
+                  00009000    00000066     dsp280x_globalvariabledefs.obj (DcdcisrFile)
+
+.ebss      1    00009400    000006c0     UNINITIALIZED
+                  00009400    00000540     dcdc100a_main.obj (.ebss)
+                  00009940    000000d6     100a_boot.obj (.ebss)
+                  00009a16    00000010     dsp280x_cputimers.obj (.ebss)
+                  00009a26    00000006     var.obj (.ebss)
+                  00009a2c    00000004     Flash2806_API_V302.lib : Flash28_Globals.obj (.ebss)
+                  00009a30    00000004     rts2800_ml.lib : _lock.obj (.ebss)
+                  00009a34    0000000c     --HOLE--
+                  00009a40    00000080                    : exit.obj (.ebss)
+
+CsmPwlFile 
+*          1    003f7ff8    00000008     UNINITIALIZED
+                  003f7ff8    00000008     dsp280x_globalvariabledefs.obj (CsmPwlFile)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+003f0020   .text
+003f60e8   C$$EXIT
+003f6040   FD$$MPY
+003f617d   FD$$TOL
+003f619c   FS$$TOFD
+003f61b9   FS$$TOU
+003f61d6   I$$TOFS
+003f6153   L$$DIV
+003f6162   L$$MOD
+003f61f0   U$$DIV
+003f61f5   U$$MOD
+003f2d7d   U$$TOFS
+003f6170   UL$$DIV
+003f6177   UL$$MOD
+00000b00   _AdcMirror
+00007100   _AdcRegs
+00008710   _App_FlashAPIInit
+003f6000   _ApplicationValidPointer
+003f0000   _Application_Entry_Point
+003f6e89   _Application_Valid
+0000944f   _AvgCurr
+003f6004   _B1AppEntryPointer
+003f6006   _B1RstEntryPointer
+003f726f   _B1_App_Entry
+003f725d   _B1_Rst_Entry
+003f71e4   _BOOT_MAIN
+003f0009   _Baseline_Version
+003f62cf   _BootRamfuncsLoadEnd
+003f62b0   _BootRamfuncsLoadStart
+000093e0   _BootRamfuncsRunStart
+003f602b   _Boot_Version
+003f5fff   _CRC16_CheckWord
+00009a16   _CpuTimer0
+00000c00   _CpuTimer0Regs
+00009a1e   _CpuTimer1
+00000c08   _CpuTimer1Regs
+00000c10   _CpuTimer2Regs
+003f7ff8   _CsmPwl
+00000ae0   _CsmRegs
+000093fb   _DSP28x_usDelay
+00009000   _Dcdcisr
+00000880   _DevEmuRegs
+003f6de4   _DisableDog
+003f6016   _DisableDogPointer
+00009580   _ECana32Temp
+00006040   _ECanaLAMRegs
+000060c0   _ECanaMOTORegs
+00006080   _ECanaMOTSRegs
+00006100   _ECanaMboxes
+00006000   _ECanaRegs
+00006240   _ECanbLAMRegs
+000062c0   _ECanbMOTORegs
+00006280   _ECanbMOTSRegs
+00006300   _ECanbMboxes
+00006200   _ECanbRegs
+00006a00   _ECap1Regs
+00006a20   _ECap2Regs
+00006a40   _ECap3Regs
+00006a60   _ECap4Regs
+00006800   _EPwm1Regs
+00006840   _EPwm2Regs
+00006880   _EPwm3Regs
+000068c0   _EPwm4Regs
+00006900   _EPwm5Regs
+00006940   _EPwm6Regs
+00006b00   _EQep1Regs
+00006b40   _EQep2Regs
+003f6dec   _EnableDog
+003f6018   _EnableDogPointer
+003f6bea   _EnableInterrupts
+00008467   _Fl2806_ClearSector
+000083d2   _Fl2806_CompactSector
+00008377   _Fl2806_EraseSector
+000084cd   _Fl2806_Init
+00008426   _Fl28x_ClearLoop
+00008259   _Fl28x_ClosePulse
+00008334   _Fl28x_CompactPulse
+000082fa   _Fl28x_CompactVerify
+00008505   _Fl28x_Delay
+00008512   _Fl28x_DisableInt
+000084f9   _Fl28x_DisableNMI
+00008204   _Fl28x_EnterCmdMode
+000081a5   _Fl28x_ErasePulse
+0000815d   _Fl28x_EraseVerify
+00008229   _Fl28x_FlashRegSleep
+000081f7   _Fl28x_LeaveCmdMode
+00008270   _Fl28x_MaskAll
+00008248   _Fl28x_OpenPulse
+000082b8   _Fl28x_ProgPulse
+0000827b   _Fl28x_ProgVerify
+00008516   _Fl28x_RestoreInt
+000084f1   _Fl28x_WatchDogDisable
+00009a29   _Flag
+000080bd   _Flash2806_Erase
+00008014   _Flash2806_Program
+0000849a   _Flash2806_Verify
+003f69eb   _Flash28_API_LoadEnd
+003f62d0   _Flash28_API_LoadStart
+00008000   _Flash28_API_RunStart
+00000a80   _FlashRegs
+00009948   _FlashStatus
+00009a2e   _Flash_CPUScaleFactor
+00009a2c   _Flash_CallbackPtr
+003f6f6a   _GetDataBlock
+000085db   _GetDataBlock2
+00008577   _GetHeader
+00006f80   _GpioCtrlRegs
+00006fc0   _GpioDataRegs
+00006fe0   _GpioIntRegs
+003f0008   _Hardware_Version
+00007900   _I2caRegs
+003f6c49   _ILLEGAL_ISR
+003ffad8   _IQ10mpyRndSatTable
+003ffacc   _IQ11mpyRndSatTable
+003ffac0   _IQ12mpyRndSatTable
+003ffab4   _IQ13mpyRndSatTable
+003ffaa8   _IQ14mpyRndSatTable
+003ffa9c   _IQ15mpyRndSatTable
+003ffa90   _IQ16mpyRndSatTable
+003ffa84   _IQ17mpyRndSatTable
+003ffa78   _IQ18mpyRndSatTable
+003ffa6c   _IQ19mpyRndSatTable
+003ffb44   _IQ1mpyRndSatTable
+003ffa60   _IQ20mpyRndSatTable
+003ffa54   _IQ21mpyRndSatTable
+003ffa48   _IQ22mpyRndSatTable
+003ffa3c   _IQ23mpyRndSatTable
+003ffa30   _IQ24mpyRndSatTable
+003ffa24   _IQ25mpyRndSatTable
+003ffa18   _IQ26mpyRndSatTable
+003ffa0c   _IQ27mpyRndSatTable
+003ffa00   _IQ28mpyRndSatTable
+003ff9f4   _IQ29mpyRndSatTable
+003ffb38   _IQ2mpyRndSatTable
+003ff9e8   _IQ30mpyRndSatTable
+003ffb2c   _IQ3mpyRndSatTable
+003ffb20   _IQ4mpyRndSatTable
+003ffb14   _IQ5mpyRndSatTable
+003ffb08   _IQ6mpyRndSatTable
+003ffafc   _IQ7mpyRndSatTable
+003ffaf0   _IQ8mpyRndSatTable
+003ffae4   _IQ9mpyRndSatTable
+003ff824   _IQatan2HalfPITable
+003ff862   _IQatan2Table
+003ff9e8   _IQatan2TableEnd
+003ff100   _IQcosTable
+003ff502   _IQcosTableEnd
+003ff502   _IQdivRoundSatTable
+003ff510   _IQdivTable
+003ff712   _IQdivTableEnd
+003ff712   _IQisqrtRoundSatTable
+003ff722   _IQisqrtTable
+003ff824   _IQisqrtTableEnd
+003ff9e8   _IQmpyRndSatTable
+003ffb50   _IQmpyRndSatTableEnd
+003ff000   _IQsinTable
+003ff400   _IQsinTableEnd
+003ff712   _IQsqrtRoundSatTable
+003ff722   _IQsqrtTable
+003ff824   _IQsqrtTableEnd
+003f69eb   _InitAdc
+003f601c   _InitAdcPointer
+003f6c11   _InitCpuTimers
+003f601a   _InitCpuTimersPointer
+003f6c71   _InitECan
+003f6d15   _InitECanGpio
+003f6010   _InitECanPointer
+003f6c76   _InitECana
+003f6d18   _InitECanaGpio
+003f6a46   _InitEPwm
+003f6b72   _InitEPwm1Gpio
+003f6b84   _InitEPwm2Gpio
+003f6b96   _InitEPwm3Gpio
+003f6baa   _InitEPwm4Gpio
+003f601e   _InitEPwmPointer
+000093e0   _InitFlash
+003f6008   _InitFlashPointer
+003f6d2e   _InitGpio
+003f600e   _InitGpioPointer
+003f6d5d   _InitI2C
+003f6d76   _InitI2CGpio
+003f6012   _InitI2CPointer
+003f6e1b   _InitPeripheralClocks
+003f6bbe   _InitPeripherals
+003f6024   _InitPeripheralsPointer
+003f6bcb   _InitPieCtrl
+003f6020   _InitPieCtrlPointer
+003f6bf3   _InitPieVectTable
+003f6022   _InitPieVectTablePointer
+003f6df4   _InitPll
+003f6e60   _InitRAM
+003f6026   _InitRAMPointer
+003f6d90   _InitSci
+003f6014   _InitSciPointer
+003f6daa   _InitSciaGpio
+003f6dd5   _InitSysCtrl
+003f600c   _InitSysCtrlPointer
+003f7065   _Load_Code_And_Execute
+000086a4   _Load_Code_And_Execute2
+003f6dc0   _MemCopy
+003f600a   _MemCopyPointer
+003f6c35   _NMI_ISR
+003f6ffb   _PRG_unlock
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+003f6ee5   _ProcessInquiry
+000094ab   _RAMP_MAX
+003f3244   _RamfuncsLoadEnd
+003f2d8d   _RamfuncsLoadStart
+0000871b   _RamfuncsRunStart
+00007050   _SciaRegs
+00007750   _ScibRegs
+0000852a   _SendBlockRequest
+003f6e45   _ServiceDog
+003f6002   _ServiceDogPointer
+003f0007   _Software_Version
+00007040   _SpiaRegs
+00007740   _SpibRegs
+00007760   _SpicRegs
+00007780   _SpidRegs
+00008523   _StartTimer
+00007010   _SysCtrlRegs
+003f6e4f   _TimeIsUp
+003f6c5d   _USER_ISR
+003f6028   _USER_ISR_Pointer
+00009427   _VASAMPLE_INV
+00009460   _VOLTcal_delay
+00007070   _XIntruptRegs
+003f621c   __IQ10div
+003f6263   __IQ10toF
+00000800   __STACK_END
+00000400   __STACK_SIZE
+ffffffff   ___binit__
+ffffffff   ___c_args__
+003f334c   ___cinit__
+003f2d8d   ___etext__
+ffffffff   ___pinit__
+003f0020   ___text__
+00009a44   __cleanup_ptr
+00009a42   __dtors_ptr
+00009a32   __lock
+003f61fb   __nop
+003f61fc   __register_lock
+003f6200   __register_unlock
+00009a30   __unlock
+003f610c   _abort
+0000946a   _adresstemp1
+00009467   _adresstemp2
+003f60ea   _atexit
+003f610d   _c_int00
+0000871b   _dcdc_isr
+003f60c2   _exit
+00009880   _fMdlAddID
+00009550   _fRdTemp
+003f10f1   _fReadFloatDataThree
+003f16b3   _fStatusTrans_New
+00009940   _g_u16FlagPFCFd
+00009942   _g_u16FromApplication
+00009941   _g_u16WaitLoopCount
+00009461   _hardadress
+00009452   _iAdjDelta
+00009422   _iCurrDelta
+000097c0   _iMdlCurrDelta
+0000946c   _iVacaSampSysb
+00009472   _iVacbSampSysb
+00009470   _iVaccSampSysb
+0000944a   _iVoltSelfAdj
+00009444   _il303ref
+00009443   _il310ref
+00009445   _il350ref
+0000942b   _il360ref
+0000942a   _il420ref
+0000942d   _il430ref
+0000942c   _il520ref
+00009434   _il550ref
+00009425   _il607ref
+00009426   _il680ref
+00009428   _il732ref
+000094c8   _iq10AcCurrFt
+00009524   _iq10AcVab
+00009528   _iq10AcVbc
+00009516   _iq10AcVca
+000094fc   _iq10AcaSampSysa
+00009510   _iq10AcaSampSysb
+0000950c   _iq10AcbSampSysa
+0000950e   _iq10AcbSampSysb
+0000950a   _iq10AccSampSysa
+00009506   _iq10AccSampSysb
+00009508   _iq10AdjTmp
+00009500   _iq10CurrConSysa
+00009502   _iq10CurrConSysb
+000094d4   _iq10CurrDisp
+00009512   _iq10CurrMax
+00009520   _iq10CurrSampSysa
+00009504   _iq10CurrSampSysb
+000094d0   _iq10LoadSstartTime
+00009530   _iq10MaintainTimes
+000094cc   _iq10MdlAvgCurr
+000094be   _iq10MdlCurr
+000094c4   _iq10MdlCurrFt
+00009800   _iq10MdlCurrent
+000094ce   _iq10MdlLimit
+000094c2   _iq10MdlPowerFt
+00009540   _iq10MdlTempUp
+000094bc   _iq10MdlVolt
+000094c6   _iq10MdlVoltFt
+000094ba   _iq10MdlVoltPre
+000094d2   _iq10MdlVoltUp
+00009532   _iq10OpenTime
+00009462   _iq10PfcFanRatio_Curr
+00009465   _iq10PfcFanRatio_Temp
+000094fe   _iq10PowerConSysa
+000094fa   _iq10PowerConSysb
+000094c0   _iq10ReonTime
+0000953e   _iq10RunTime
+00009538   _iq10SetLimit
+0000952e   _iq10SetLimitTrue
+00009542   _iq10SetPower
+00009534   _iq10SetPowerTrue
+0000952a   _iq10SetPowerWant
+0000952c   _iq10SetSysTmp
+00009536   _iq10SetVolt
+000094f2   _iq10SetVoltOld
+0000953c   _iq10SetVoltTrue
+000094ca   _iq10SoftLimit
+000094d8   _iq10TempCOld
+000094de   _iq10TempCtrl
+000094d6   _iq10TempDc
+000094da   _iq10TempMOld
+00009554   _iq10Tmp
+0000951a   _iq10Vaca
+00009518   _iq10Vacb
+0000951c   _iq10Vacc
+00009548   _iq10VoltAdd
+000094f8   _iq10VoltOld
+000094f4   _iq10VrefGainCurr
+000094dc   _iq10WalkinLimit
+0000954e   _iq12Tmp
+00009522   _iq12VoltConSysa
+0000954c   _iq12VoltConSysa_inv
+0000951e   _iq12VoltConSysb
+00009514   _iq12VoltSampSysa
+00009526   _iq12VoltSampSysb
+000094e8   _lAdcSum0
+000094ee   _lAdcSum1
+000094ec   _lAdcSum2
+000094f0   _lAdcSum3
+00009466   _lCurr10A
+00009450   _lCurr8A
+00009556   _lCurrRate
+00009552   _lPowerMax
+0000945f   _leddelay
+003f0020   _main
+003f2cc4   _sCodeChk
+0000954a   _tagStatusSd
+003f0fd1   _uSecond
+0000945e   _ubAddrCalcTimer
+000094e6   _ubitTestFlag
+000094e4   _ubitfCodeChkRd0
+000094e0   _ubitfCodeChkRd1
+000094e2   _ubitfCodeChkRd2
+00009440   _ucAdcSampFlag
+00009404   _ucAddIdentify
+00009405   _ucAddIdentifyNum
+00009402   _ucAddressCalFlag
+00009401   _ucAddressSmall
+003f1649   _ucAscToHex
+0000940f   _ucBroadCastCom
+00009407   _ucCANSend
+0000943d   _ucCan5DatFlag
+0000940d   _ucCan5SynFlag
+00009447   _ucCircuitCalFlag
+00009439   _ucCurrSerUnBal
+00009438   _ucCurrUnBal
+00009406   _ucErrType
+00009414   _ucIDError
+0000943f   _ucIoSamConFlag
+00009409   _ucIoSamOVFlag
+00009442   _ucLightFlag
+0000943c   _ucLimitStatus
+0000940c   _ucLoadShareFlag
+00009780   _ucMdlOnoff
+0000940b   _ucMemScopeFlag
+00009420   _ucMemoryScope
+00009408   _ucMsgType
+00009441   _ucOffFlag
+00009410   _ucOffPowerBak
+00009448   _ucOpenOrder
+0000943b   _ucOverTempBak
+0000943a   _ucOverVdcBak
+00009446   _ucOverVoltCount
+00009449   _ucOverVoltStatus
+00009478   _ucPermitAdjust
+00009400   _ucReadEepromOk
+0000941a   _ucReceiveOk
+000095c0   _ucRxBuffer
+0000941b   _ucSCISendFlag
+0000940a   _ucSciDatFlag
+00009418   _ucSendCid
+0000940e   _ucTempAlarm
+00009411   _ucTempDeviceBak
+00009600   _ucTxBuffer
+00009413   _ucVoltAdjDelta
+00009412   _ucWalkinFlag
+003f10b2   _ucWriteFloatDataThree
+00009403   _ucWriteNumber
+00009497   _ui60STimer
+0000948d   _uiAcLimitFlag
+0000948c   _uiAcaVoltOld
+00009482   _uiAcbVoltOld
+00009480   _uiAccVoltOld
+00009430   _uiActionReady
+00009700   _uiAdcData0
+00009640   _uiAdcData1
+00009680   _uiAdcData2
+000096c0   _uiAdcData3
+0000949f   _uiAdcPoint
+00009a2a   _uiAddrConst
+00009451   _uiAdjFlag
+00009459   _uiAdjTimer
+000094a1   _uiBarCode0H
+000094a0   _uiBarCode0L
+000094a5   _uiBarCode1H
+000094a2   _uiBarCode1L
+000094aa   _uiBarCode2H
+000094ac   _uiBarCode2L
+000094a8   _uiBarCode3H
+000094a7   _uiBarCode3L
+00009490   _uiBaseTimer
+00009a27   _uiBaudConst
+00009493   _uiBox0FailTimer
+000007fa   _uiCanBootBlockLength
+0000941e   _uiCanDataId
+000007f0   _uiCanErrorCount
+0000949d   _uiCanFailTime
+000007fb   _uiCanSlaveAddress
+000094b1   _uiCharactData0H
+000094b8   _uiCharactData0L
+00009474   _uiCheckChar
+00009431   _uiCloseTime
+00009485   _uiCodeType
+000094b2   _uiCount1
+000094b4   _uiCount2
+000094b3   _uiCount3
+000094b5   _uiCount4
+0000941f   _uiCurrCtrlFlag
+0000944b   _uiDCVoltref
+00009980   _uiDataBuf
+0000941d   _uiEepromFlag
+0000955e   _uiEfficfactor
+000094a9   _uiEpromWrAddr
+0000948e   _uiEpromWrValue
+00009481   _uiForbidConnect
+00009491   _uiFreStepTimer
+000007ff   _uiFromApplication
+00009483   _uiFuseBroken
+00009a28   _uiGroupConst
+00009a26   _uiGroupTemp
+003f1664   _uiHexToAsc
+00009429   _uiI2CErrorType
+003f102c   _uiI2caReadData
+003f0fe9   _uiI2caWriteData
+00009544   _uiIoStatu
+00009496   _uiLedTimer
+000094b9   _uiMaintainData0H
+000094a4   _uiMaintainData0L
+000094a3   _uiMaintainData1H
+000094a6   _uiMaintainData1L
+00009499   _uiMaskWarnCnt
+00009486   _uiMasterMdl
+000007fe   _uiMdlAddr
+00009495   _uiMdlCalibra
+00009437   _uiMdlCtrl
+00009494   _uiMdlCurr
+0000949c   _uiMdlCurrOld
+0000945d   _uiMdlNumber
+0000942f   _uiMdlStatus
+0000948f   _uiMdlType
+00009740   _uiMdlVolt
+00009471   _uiMemAddr0Value
+0000948b   _uiMemAddr1Value
+00009487   _uiMemRdAddr0
+00009488   _uiMemRdAddr1
+00009546   _uiMemScopeAdd0
+00009558   _uiMemScopeAdd1
+00009489   _uiMemWrAddr
+0000948a   _uiMemWrValue
+0000944c   _uiNextDelay
+000094ae   _uiNodeId0H
+000094ad   _uiNodeId0L
+000094b0   _uiNodeId1H
+000094af   _uiNodeId1L
+0000949a   _uiOTjudgeTimer
+0000942e   _uiOpenTime
+00009435   _uiPfcCtrl
+00009432   _uiPfcOnOff
+00009419   _uiPfcSendId
+00009477   _uiPfcStatus
+0000947e   _uiPositionMode
+00009436   _uiRdMemNum
+0000955a   _uiRdMsgBuffer
+00009433   _uiRdNumSet
+000007f1   _uiRecvOk
+00009416   _uiRxPoint
+0000947d   _uiSciComFail
+0000947b   _uiSciComTime
+0000947c   _uiSciErrType
+00009498   _uiSciFailTime
+00009458   _uiSelfChkAttr
+0000944e   _uiSelfChkDelay
+00009454   _uiSelfChkEn
+00009455   _uiSelfChkFlag
+00009453   _uiSelfChkSend
+00009457   _uiSelfChkStart
+0000945c   _uiSelfChkStat
+00009456   _uiSelfChkTimer
+0000945b   _uiSelfChking
+0000944d   _uiSelfTimeOut
+0000945a   _uiSelfchkAddr
+00009475   _uiSendChar
+000007fc   _uiSendID
+000007fd   _uiSendOk
+0000949b   _uiSequeOnTimer
+0000941c   _uiSetEepromAdd
+00009492   _uiSoftOvpTimer
+00009a2b   _uiTIME
+0000946e   _uiTempPfc
+00009417   _uiTxLength
+00009415   _uiTxPoint
+0000946b   _uiVacaSampSysa
+0000947a   _uiVacbSampSysa
+00009473   _uiVaccSampSysa
+000094b6   _uiVersionNoHw
+000094b7   _uiVersionNoSw
+00009421   _uiVoltAca
+00009424   _uiVoltAcb
+00009476   _uiVoltAcc
+00009479   _uiVoltPfcAll
+0000946d   _uiVoltPfcDn
+0000946f   _uiVoltPfcUp
+0000943e   _uiVpfcSet
+00009423   _uiVpfcSet_true
+003f70f7   _uiWaitPassiveTriggerCommand
+0000949e   _uiWalkinTimer
+0000947f   _uiWrSigErr
+000007f8   _ulCanBootBlockAddr
+000007f2   _ulCanBootDest
+000007f6   _ulCanBootMDH
+000007f4   _ulCanBootMDL
+00009944   _ulENP_Hi_SN
+00009946   _ulENP_Lo_SN
+000094ea   _ulSelfChkTimer
+0000953a   _ulTime1
+000094f6   _ulTime2
+00009469   _uwAveCurrCalIndex
+00009464   _uwOnOffDCDC
+00009484   _uwPfcFirmwareVer
+00009468   _uwTurnOnFirstRpl
+003f07fd   _vAdcTreatment
+003f0f3a   _vAddressCal
+003f0e44   _vAvgCurrCal
+003f09c3   _vCircuitCal
+003f26dd   _vDataInit
+003f1792   _vGetCanData
+003f150c   _vGetSciData
+003f04da   _vIoPortCtrl
+003f27f2   _vLimitInit
+003f0089   _vMtimerTreat
+003f1aee   _vRmpProtocol
+003f258c   _vRrpProtocol
+003f02d3   _vSelfDiagnotics
+003f12ba   _vSendSciData
+003f0389   _vSstartCtrl
+003f1694   _vTxdAsc
+003f1183   _vWriteE2PROMSIG
+003f1285   _vWriteFloatDataSig
+ffffffff   binit
+003f334c   cinit
+003f7ff6   code_start
+003f2d8d   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000400   __STACK_SIZE
+000007f0   _uiCanErrorCount
+000007f1   _uiRecvOk
+000007f2   _ulCanBootDest
+000007f4   _ulCanBootMDL
+000007f6   _ulCanBootMDH
+000007f8   _ulCanBootBlockAddr
+000007fa   _uiCanBootBlockLength
+000007fb   _uiCanSlaveAddress
+000007fc   _uiSendID
+000007fd   _uiSendOk
+000007fe   _uiMdlAddr
+000007ff   _uiFromApplication
+00000800   __STACK_END
+00000880   _DevEmuRegs
+00000a80   _FlashRegs
+00000ae0   _CsmRegs
+00000b00   _AdcMirror
+00000c00   _CpuTimer0Regs
+00000c08   _CpuTimer1Regs
+00000c10   _CpuTimer2Regs
+00000ce0   _PieCtrlRegs
+00000d00   _PieVectTable
+00006000   _ECanaRegs
+00006040   _ECanaLAMRegs
+00006080   _ECanaMOTSRegs
+000060c0   _ECanaMOTORegs
+00006100   _ECanaMboxes
+00006200   _ECanbRegs
+00006240   _ECanbLAMRegs
+00006280   _ECanbMOTSRegs
+000062c0   _ECanbMOTORegs
+00006300   _ECanbMboxes
+00006800   _EPwm1Regs
+00006840   _EPwm2Regs
+00006880   _EPwm3Regs
+000068c0   _EPwm4Regs
+00006900   _EPwm5Regs
+00006940   _EPwm6Regs
+00006a00   _ECap1Regs
+00006a20   _ECap2Regs
+00006a40   _ECap3Regs
+00006a60   _ECap4Regs
+00006b00   _EQep1Regs
+00006b40   _EQep2Regs
+00006f80   _GpioCtrlRegs
+00006fc0   _GpioDataRegs
+00006fe0   _GpioIntRegs
+00007010   _SysCtrlRegs
+00007040   _SpiaRegs
+00007050   _SciaRegs
+00007070   _XIntruptRegs
+00007100   _AdcRegs
+00007740   _SpibRegs
+00007750   _ScibRegs
+00007760   _SpicRegs
+00007780   _SpidRegs
+00007900   _I2caRegs
+00008000   _Flash28_API_RunStart
+00008014   _Flash2806_Program
+000080bd   _Flash2806_Erase
+0000815d   _Fl28x_EraseVerify
+000081a5   _Fl28x_ErasePulse
+000081f7   _Fl28x_LeaveCmdMode
+00008204   _Fl28x_EnterCmdMode
+00008229   _Fl28x_FlashRegSleep
+00008248   _Fl28x_OpenPulse
+00008259   _Fl28x_ClosePulse
+00008270   _Fl28x_MaskAll
+0000827b   _Fl28x_ProgVerify
+000082b8   _Fl28x_ProgPulse
+000082fa   _Fl28x_CompactVerify
+00008334   _Fl28x_CompactPulse
+00008377   _Fl2806_EraseSector
+000083d2   _Fl2806_CompactSector
+00008426   _Fl28x_ClearLoop
+00008467   _Fl2806_ClearSector
+0000849a   _Flash2806_Verify
+000084cd   _Fl2806_Init
+000084f1   _Fl28x_WatchDogDisable
+000084f9   _Fl28x_DisableNMI
+00008505   _Fl28x_Delay
+00008512   _Fl28x_DisableInt
+00008516   _Fl28x_RestoreInt
+00008523   _StartTimer
+0000852a   _SendBlockRequest
+00008577   _GetHeader
+000085db   _GetDataBlock2
+000086a4   _Load_Code_And_Execute2
+00008710   _App_FlashAPIInit
+0000871b   _RamfuncsRunStart
+0000871b   _dcdc_isr
+00009000   _Dcdcisr
+000093e0   _BootRamfuncsRunStart
+000093e0   _InitFlash
+000093fb   _DSP28x_usDelay
+00009400   _ucReadEepromOk
+00009401   _ucAddressSmall
+00009402   _ucAddressCalFlag
+00009403   _ucWriteNumber
+00009404   _ucAddIdentify
+00009405   _ucAddIdentifyNum
+00009406   _ucErrType
+00009407   _ucCANSend
+00009408   _ucMsgType
+00009409   _ucIoSamOVFlag
+0000940a   _ucSciDatFlag
+0000940b   _ucMemScopeFlag
+0000940c   _ucLoadShareFlag
+0000940d   _ucCan5SynFlag
+0000940e   _ucTempAlarm
+0000940f   _ucBroadCastCom
+00009410   _ucOffPowerBak
+00009411   _ucTempDeviceBak
+00009412   _ucWalkinFlag
+00009413   _ucVoltAdjDelta
+00009414   _ucIDError
+00009415   _uiTxPoint
+00009416   _uiRxPoint
+00009417   _uiTxLength
+00009418   _ucSendCid
+00009419   _uiPfcSendId
+0000941a   _ucReceiveOk
+0000941b   _ucSCISendFlag
+0000941c   _uiSetEepromAdd
+0000941d   _uiEepromFlag
+0000941e   _uiCanDataId
+0000941f   _uiCurrCtrlFlag
+00009420   _ucMemoryScope
+00009421   _uiVoltAca
+00009422   _iCurrDelta
+00009423   _uiVpfcSet_true
+00009424   _uiVoltAcb
+00009425   _il607ref
+00009426   _il680ref
+00009427   _VASAMPLE_INV
+00009428   _il732ref
+00009429   _uiI2CErrorType
+0000942a   _il420ref
+0000942b   _il360ref
+0000942c   _il520ref
+0000942d   _il430ref
+0000942e   _uiOpenTime
+0000942f   _uiMdlStatus
+00009430   _uiActionReady
+00009431   _uiCloseTime
+00009432   _uiPfcOnOff
+00009433   _uiRdNumSet
+00009434   _il550ref
+00009435   _uiPfcCtrl
+00009436   _uiRdMemNum
+00009437   _uiMdlCtrl
+00009438   _ucCurrUnBal
+00009439   _ucCurrSerUnBal
+0000943a   _ucOverVdcBak
+0000943b   _ucOverTempBak
+0000943c   _ucLimitStatus
+0000943d   _ucCan5DatFlag
+0000943e   _uiVpfcSet
+0000943f   _ucIoSamConFlag
+00009440   _ucAdcSampFlag
+00009441   _ucOffFlag
+00009442   _ucLightFlag
+00009443   _il310ref
+00009444   _il303ref
+00009445   _il350ref
+00009446   _ucOverVoltCount
+00009447   _ucCircuitCalFlag
+00009448   _ucOpenOrder
+00009449   _ucOverVoltStatus
+0000944a   _iVoltSelfAdj
+0000944b   _uiDCVoltref
+0000944c   _uiNextDelay
+0000944d   _uiSelfTimeOut
+0000944e   _uiSelfChkDelay
+0000944f   _AvgCurr
+00009450   _lCurr8A
+00009451   _uiAdjFlag
+00009452   _iAdjDelta
+00009453   _uiSelfChkSend
+00009454   _uiSelfChkEn
+00009455   _uiSelfChkFlag
+00009456   _uiSelfChkTimer
+00009457   _uiSelfChkStart
+00009458   _uiSelfChkAttr
+00009459   _uiAdjTimer
+0000945a   _uiSelfchkAddr
+0000945b   _uiSelfChking
+0000945c   _uiSelfChkStat
+0000945d   _uiMdlNumber
+0000945e   _ubAddrCalcTimer
+0000945f   _leddelay
+00009460   _VOLTcal_delay
+00009461   _hardadress
+00009462   _iq10PfcFanRatio_Curr
+00009464   _uwOnOffDCDC
+00009465   _iq10PfcFanRatio_Temp
+00009466   _lCurr10A
+00009467   _adresstemp2
+00009468   _uwTurnOnFirstRpl
+00009469   _uwAveCurrCalIndex
+0000946a   _adresstemp1
+0000946b   _uiVacaSampSysa
+0000946c   _iVacaSampSysb
+0000946d   _uiVoltPfcDn
+0000946e   _uiTempPfc
+0000946f   _uiVoltPfcUp
+00009470   _iVaccSampSysb
+00009471   _uiMemAddr0Value
+00009472   _iVacbSampSysb
+00009473   _uiVaccSampSysa
+00009474   _uiCheckChar
+00009475   _uiSendChar
+00009476   _uiVoltAcc
+00009477   _uiPfcStatus
+00009478   _ucPermitAdjust
+00009479   _uiVoltPfcAll
+0000947a   _uiVacbSampSysa
+0000947b   _uiSciComTime
+0000947c   _uiSciErrType
+0000947d   _uiSciComFail
+0000947e   _uiPositionMode
+0000947f   _uiWrSigErr
+00009480   _uiAccVoltOld
+00009481   _uiForbidConnect
+00009482   _uiAcbVoltOld
+00009483   _uiFuseBroken
+00009484   _uwPfcFirmwareVer
+00009485   _uiCodeType
+00009486   _uiMasterMdl
+00009487   _uiMemRdAddr0
+00009488   _uiMemRdAddr1
+00009489   _uiMemWrAddr
+0000948a   _uiMemWrValue
+0000948b   _uiMemAddr1Value
+0000948c   _uiAcaVoltOld
+0000948d   _uiAcLimitFlag
+0000948e   _uiEpromWrValue
+0000948f   _uiMdlType
+00009490   _uiBaseTimer
+00009491   _uiFreStepTimer
+00009492   _uiSoftOvpTimer
+00009493   _uiBox0FailTimer
+00009494   _uiMdlCurr
+00009495   _uiMdlCalibra
+00009496   _uiLedTimer
+00009497   _ui60STimer
+00009498   _uiSciFailTime
+00009499   _uiMaskWarnCnt
+0000949a   _uiOTjudgeTimer
+0000949b   _uiSequeOnTimer
+0000949c   _uiMdlCurrOld
+0000949d   _uiCanFailTime
+0000949e   _uiWalkinTimer
+0000949f   _uiAdcPoint
+000094a0   _uiBarCode0L
+000094a1   _uiBarCode0H
+000094a2   _uiBarCode1L
+000094a3   _uiMaintainData1H
+000094a4   _uiMaintainData0L
+000094a5   _uiBarCode1H
+000094a6   _uiMaintainData1L
+000094a7   _uiBarCode3L
+000094a8   _uiBarCode3H
+000094a9   _uiEpromWrAddr
+000094aa   _uiBarCode2H
+000094ab   _RAMP_MAX
+000094ac   _uiBarCode2L
+000094ad   _uiNodeId0L
+000094ae   _uiNodeId0H
+000094af   _uiNodeId1L
+000094b0   _uiNodeId1H
+000094b1   _uiCharactData0H
+000094b2   _uiCount1
+000094b3   _uiCount3
+000094b4   _uiCount2
+000094b5   _uiCount4
+000094b6   _uiVersionNoHw
+000094b7   _uiVersionNoSw
+000094b8   _uiCharactData0L
+000094b9   _uiMaintainData0H
+000094ba   _iq10MdlVoltPre
+000094bc   _iq10MdlVolt
+000094be   _iq10MdlCurr
+000094c0   _iq10ReonTime
+000094c2   _iq10MdlPowerFt
+000094c4   _iq10MdlCurrFt
+000094c6   _iq10MdlVoltFt
+000094c8   _iq10AcCurrFt
+000094ca   _iq10SoftLimit
+000094cc   _iq10MdlAvgCurr
+000094ce   _iq10MdlLimit
+000094d0   _iq10LoadSstartTime
+000094d2   _iq10MdlVoltUp
+000094d4   _iq10CurrDisp
+000094d6   _iq10TempDc
+000094d8   _iq10TempCOld
+000094da   _iq10TempMOld
+000094dc   _iq10WalkinLimit
+000094de   _iq10TempCtrl
+000094e0   _ubitfCodeChkRd1
+000094e2   _ubitfCodeChkRd2
+000094e4   _ubitfCodeChkRd0
+000094e6   _ubitTestFlag
+000094e8   _lAdcSum0
+000094ea   _ulSelfChkTimer
+000094ec   _lAdcSum2
+000094ee   _lAdcSum1
+000094f0   _lAdcSum3
+000094f2   _iq10SetVoltOld
+000094f4   _iq10VrefGainCurr
+000094f6   _ulTime2
+000094f8   _iq10VoltOld
+000094fa   _iq10PowerConSysb
+000094fc   _iq10AcaSampSysa
+000094fe   _iq10PowerConSysa
+00009500   _iq10CurrConSysa
+00009502   _iq10CurrConSysb
+00009504   _iq10CurrSampSysb
+00009506   _iq10AccSampSysb
+00009508   _iq10AdjTmp
+0000950a   _iq10AccSampSysa
+0000950c   _iq10AcbSampSysa
+0000950e   _iq10AcbSampSysb
+00009510   _iq10AcaSampSysb
+00009512   _iq10CurrMax
+00009514   _iq12VoltSampSysa
+00009516   _iq10AcVca
+00009518   _iq10Vacb
+0000951a   _iq10Vaca
+0000951c   _iq10Vacc
+0000951e   _iq12VoltConSysb
+00009520   _iq10CurrSampSysa
+00009522   _iq12VoltConSysa
+00009524   _iq10AcVab
+00009526   _iq12VoltSampSysb
+00009528   _iq10AcVbc
+0000952a   _iq10SetPowerWant
+0000952c   _iq10SetSysTmp
+0000952e   _iq10SetLimitTrue
+00009530   _iq10MaintainTimes
+00009532   _iq10OpenTime
+00009534   _iq10SetPowerTrue
+00009536   _iq10SetVolt
+00009538   _iq10SetLimit
+0000953a   _ulTime1
+0000953c   _iq10SetVoltTrue
+0000953e   _iq10RunTime
+00009540   _iq10MdlTempUp
+00009542   _iq10SetPower
+00009544   _uiIoStatu
+00009546   _uiMemScopeAdd0
+00009548   _iq10VoltAdd
+0000954a   _tagStatusSd
+0000954c   _iq12VoltConSysa_inv
+0000954e   _iq12Tmp
+00009550   _fRdTemp
+00009552   _lPowerMax
+00009554   _iq10Tmp
+00009556   _lCurrRate
+00009558   _uiMemScopeAdd1
+0000955a   _uiRdMsgBuffer
+0000955e   _uiEfficfactor
+00009580   _ECana32Temp
+000095c0   _ucRxBuffer
+00009600   _ucTxBuffer
+00009640   _uiAdcData1
+00009680   _uiAdcData2
+000096c0   _uiAdcData3
+00009700   _uiAdcData0
+00009740   _uiMdlVolt
+00009780   _ucMdlOnoff
+000097c0   _iMdlCurrDelta
+00009800   _iq10MdlCurrent
+00009880   _fMdlAddID
+00009940   _g_u16FlagPFCFd
+00009941   _g_u16WaitLoopCount
+00009942   _g_u16FromApplication
+00009944   _ulENP_Hi_SN
+00009946   _ulENP_Lo_SN
+00009948   _FlashStatus
+00009980   _uiDataBuf
+00009a16   _CpuTimer0
+00009a1e   _CpuTimer1
+00009a26   _uiGroupTemp
+00009a27   _uiBaudConst
+00009a28   _uiGroupConst
+00009a29   _Flag
+00009a2a   _uiAddrConst
+00009a2b   _uiTIME
+00009a2c   _Flash_CallbackPtr
+00009a2e   _Flash_CPUScaleFactor
+00009a30   __unlock
+00009a32   __lock
+00009a42   __dtors_ptr
+00009a44   __cleanup_ptr
+003f0000   _Application_Entry_Point
+003f0007   _Software_Version
+003f0008   _Hardware_Version
+003f0009   _Baseline_Version
+003f0020   .text
+003f0020   ___text__
+003f0020   _main
+003f0089   _vMtimerTreat
+003f02d3   _vSelfDiagnotics
+003f0389   _vSstartCtrl
+003f04da   _vIoPortCtrl
+003f07fd   _vAdcTreatment
+003f09c3   _vCircuitCal
+003f0e44   _vAvgCurrCal
+003f0f3a   _vAddressCal
+003f0fd1   _uSecond
+003f0fe9   _uiI2caWriteData
+003f102c   _uiI2caReadData
+003f10b2   _ucWriteFloatDataThree
+003f10f1   _fReadFloatDataThree
+003f1183   _vWriteE2PROMSIG
+003f1285   _vWriteFloatDataSig
+003f12ba   _vSendSciData
+003f150c   _vGetSciData
+003f1649   _ucAscToHex
+003f1664   _uiHexToAsc
+003f1694   _vTxdAsc
+003f16b3   _fStatusTrans_New
+003f1792   _vGetCanData
+003f1aee   _vRmpProtocol
+003f258c   _vRrpProtocol
+003f26dd   _vDataInit
+003f27f2   _vLimitInit
+003f2cc4   _sCodeChk
+003f2d7d   U$$TOFS
+003f2d8d   _RamfuncsLoadStart
+003f2d8d   ___etext__
+003f2d8d   etext
+003f3244   _RamfuncsLoadEnd
+003f334c   ___cinit__
+003f334c   cinit
+003f5fff   _CRC16_CheckWord
+003f6000   _ApplicationValidPointer
+003f6002   _ServiceDogPointer
+003f6004   _B1AppEntryPointer
+003f6006   _B1RstEntryPointer
+003f6008   _InitFlashPointer
+003f600a   _MemCopyPointer
+003f600c   _InitSysCtrlPointer
+003f600e   _InitGpioPointer
+003f6010   _InitECanPointer
+003f6012   _InitI2CPointer
+003f6014   _InitSciPointer
+003f6016   _DisableDogPointer
+003f6018   _EnableDogPointer
+003f601a   _InitCpuTimersPointer
+003f601c   _InitAdcPointer
+003f601e   _InitEPwmPointer
+003f6020   _InitPieCtrlPointer
+003f6022   _InitPieVectTablePointer
+003f6024   _InitPeripheralsPointer
+003f6026   _InitRAMPointer
+003f6028   _USER_ISR_Pointer
+003f602b   _Boot_Version
+003f6040   FD$$MPY
+003f60c2   _exit
+003f60e8   C$$EXIT
+003f60ea   _atexit
+003f610c   _abort
+003f610d   _c_int00
+003f6153   L$$DIV
+003f6162   L$$MOD
+003f6170   UL$$DIV
+003f6177   UL$$MOD
+003f617d   FD$$TOL
+003f619c   FS$$TOFD
+003f61b9   FS$$TOU
+003f61d6   I$$TOFS
+003f61f0   U$$DIV
+003f61f5   U$$MOD
+003f61fb   __nop
+003f61fc   __register_lock
+003f6200   __register_unlock
+003f621c   __IQ10div
+003f6263   __IQ10toF
+003f62b0   _BootRamfuncsLoadStart
+003f62cf   _BootRamfuncsLoadEnd
+003f62d0   _Flash28_API_LoadStart
+003f69eb   _Flash28_API_LoadEnd
+003f69eb   _InitAdc
+003f6a46   _InitEPwm
+003f6b72   _InitEPwm1Gpio
+003f6b84   _InitEPwm2Gpio
+003f6b96   _InitEPwm3Gpio
+003f6baa   _InitEPwm4Gpio
+003f6bbe   _InitPeripherals
+003f6bcb   _InitPieCtrl
+003f6bea   _EnableInterrupts
+003f6bf3   _InitPieVectTable
+003f6c11   _InitCpuTimers
+003f6c35   _NMI_ISR
+003f6c49   _ILLEGAL_ISR
+003f6c5d   _USER_ISR
+003f6c71   _InitECan
+003f6c76   _InitECana
+003f6d15   _InitECanGpio
+003f6d18   _InitECanaGpio
+003f6d2e   _InitGpio
+003f6d5d   _InitI2C
+003f6d76   _InitI2CGpio
+003f6d90   _InitSci
+003f6daa   _InitSciaGpio
+003f6dc0   _MemCopy
+003f6dd5   _InitSysCtrl
+003f6de4   _DisableDog
+003f6dec   _EnableDog
+003f6df4   _InitPll
+003f6e1b   _InitPeripheralClocks
+003f6e45   _ServiceDog
+003f6e4f   _TimeIsUp
+003f6e60   _InitRAM
+003f6e89   _Application_Valid
+003f6ee5   _ProcessInquiry
+003f6f6a   _GetDataBlock
+003f6ffb   _PRG_unlock
+003f7065   _Load_Code_And_Execute
+003f70f7   _uiWaitPassiveTriggerCommand
+003f71e4   _BOOT_MAIN
+003f725d   _B1_Rst_Entry
+003f726f   _B1_App_Entry
+003f7ff6   code_start
+003f7ff8   _CsmPwl
+003ff000   _IQsinTable
+003ff100   _IQcosTable
+003ff400   _IQsinTableEnd
+003ff502   _IQcosTableEnd
+003ff502   _IQdivRoundSatTable
+003ff510   _IQdivTable
+003ff712   _IQdivTableEnd
+003ff712   _IQisqrtRoundSatTable
+003ff712   _IQsqrtRoundSatTable
+003ff722   _IQisqrtTable
+003ff722   _IQsqrtTable
+003ff824   _IQatan2HalfPITable
+003ff824   _IQisqrtTableEnd
+003ff824   _IQsqrtTableEnd
+003ff862   _IQatan2Table
+003ff9e8   _IQ30mpyRndSatTable
+003ff9e8   _IQatan2TableEnd
+003ff9e8   _IQmpyRndSatTable
+003ff9f4   _IQ29mpyRndSatTable
+003ffa00   _IQ28mpyRndSatTable
+003ffa0c   _IQ27mpyRndSatTable
+003ffa18   _IQ26mpyRndSatTable
+003ffa24   _IQ25mpyRndSatTable
+003ffa30   _IQ24mpyRndSatTable
+003ffa3c   _IQ23mpyRndSatTable
+003ffa48   _IQ22mpyRndSatTable
+003ffa54   _IQ21mpyRndSatTable
+003ffa60   _IQ20mpyRndSatTable
+003ffa6c   _IQ19mpyRndSatTable
+003ffa78   _IQ18mpyRndSatTable
+003ffa84   _IQ17mpyRndSatTable
+003ffa90   _IQ16mpyRndSatTable
+003ffa9c   _IQ15mpyRndSatTable
+003ffaa8   _IQ14mpyRndSatTable
+003ffab4   _IQ13mpyRndSatTable
+003ffac0   _IQ12mpyRndSatTable
+003ffacc   _IQ11mpyRndSatTable
+003ffad8   _IQ10mpyRndSatTable
+003ffae4   _IQ9mpyRndSatTable
+003ffaf0   _IQ8mpyRndSatTable
+003ffafc   _IQ7mpyRndSatTable
+003ffb08   _IQ6mpyRndSatTable
+003ffb14   _IQ5mpyRndSatTable
+003ffb20   _IQ4mpyRndSatTable
+003ffb2c   _IQ3mpyRndSatTable
+003ffb38   _IQ2mpyRndSatTable
+003ffb44   _IQ1mpyRndSatTable
+003ffb50   _IQmpyRndSatTableEnd
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[581 symbols]
